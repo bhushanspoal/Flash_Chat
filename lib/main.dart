@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:Flash_Chat/screens/welcome_screen.dart';
+import 'package:Flash_Chat/screens/registration_screen.dart';
+import 'package:Flash_Chat/screens/login_screen.dart';
+import 'package:Flash_Chat/screens/chat_screen.dart';
 
 void main() => runApp(FlashChat());
 
@@ -12,7 +15,13 @@ class FlashChat extends StatelessWidget {
           bodyText2: TextStyle(color: Colors.black54),
         ),
       ),
-      home: WelcomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) =>  WelcomeScreen(),
+        '/second': (context) => RegistrationScreen(),
+        '/third': (context) =>  LoginScreen(),
+        '/fourth': (context) =>  ChatScreen(),
+      },
     );
   }
 }
